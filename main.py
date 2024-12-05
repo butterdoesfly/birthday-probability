@@ -1,5 +1,3 @@
-# Add like try except w/ loop to repeat input if bad input is given
-# Give explanation of program when starting it
 # Add most amount of people who share a singular birthday
 
 import random
@@ -52,7 +50,15 @@ def getDate(_birthday):
         _birthdate[1] = str(_birthdate[1]) + "th"
     return _birthdate
 
-numOfPeople = int(input("How many people are in the room?: "))
+print("This program simulates a room of random people with random birthdays (not inluding leapyears), and displays the shared birthdays between them.")
+
+numOfPeople = ""
+while numOfPeople == "":
+    try:
+        numOfPeople = abs(int(input("Enter the number of people in the room: ")))
+    except:
+        print("That is an invalid input!\n")
+
 birthdays = []
 for i in range(numOfPeople):
     birthdays.append(random.randint(1, 365))
