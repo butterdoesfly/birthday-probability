@@ -104,6 +104,3 @@ else:
     print(f"There are {duplicateBirthdayCount} shared birthdays:")
 
 print(duplicateBirthdaysString)
-
-
-
